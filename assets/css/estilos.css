@@ -1,0 +1,288 @@
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #333;
+    color: white;
+    height: 100vh;
+    padding-top: 20px;
+    position: fixed;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    text-align: center;
+}
+
+.sidebar ul li a:hover {
+    background-color: #444;
+}
+
+.main-content {
+    margin-left: 200px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Menú superior */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    align-items: center;
+}
+
+.topbar .logo {
+    font-size: 24px;
+    margin-right: auto;
+}
+
+.topbar .logo-item img {
+    width: 15%; /* adjust the width of each image */
+    margin: 10px; /* add some margin between images */
+    height: auto;  
+    margin-right: auto;   
+    animation: spin 2s linear infinite; 
+}
+
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+
+.topbar nav ul {
+    display: flex;
+    list-style-type: none;
+    margin-left: auto;
+}
+
+.topbar nav ul li {
+    margin: 0 10px;
+}
+
+.topbar nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.home {
+    display: flex; /* Establecemos que el elemento con clase "home" utilizará Flexbox */
+    flex-wrap: wrap; /* Permitimos que los elementos se envuelvan en una nueva línea si no caben en la misma */
+    justify-content: space-between; /* Distribuimos los elementos de manera que haya un espacio igual entre ellos */
+  }
+
+.home h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom:4px ;
+    padding: 10px;
+}
+  
+  .home > div { /* Seleccionamos los elementos div dentro de la clase "home" */
+    flex-basis: 45%; /* Establecemos que cada elemento div tendrá un ancho base del 45% */
+    margin: 20px; /* Agregamos un margen de 20px a cada elemento div */
+    padding: 20px; /* Agregamos un padding de 20px a cada elemento div */
+    background-color: #f7f7f7; /* Agregamos un fondo claro a cada elemento div */
+    border: 1px solid #ddd; /* Agregamos un borde gris claro a cada elemento div */
+  }
+
+/* Sección de galería */
+.gallery {
+    padding: 20px;
+    flex: 1;
+}
+
+.gallery h2 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom:2px ;
+    padding: 10px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.gallery-item img {
+    width: 80%;
+    margin: 10px;
+    height: auto;
+    transition: transform 0.3s ease;
+    flex: 1 1 calc(50% - 20px); /* Ajuste para móvil */
+}
+
+.gallery-item-2 img {
+    width: 60%;
+    margin: 10px;
+    height: auto;
+    animation: move 2s linear infinite;
+}
+
+@keyframes move {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(20px);
+    }
+}
+
+.gallery-item-3 img {
+    width: 60%;
+    margin: 10px;
+    height: auto;
+    filter: grayscale(100%); /* Convertimos la imagen a escala de grises */
+    transition: filter 0.5s;
+}
+
+.gallery-item-3:hover {
+    filter: none; /* Al pasar el cursor sobre la imagen, se vuelve a mostrar en color */
+}
+
+
+.gallery-item img:hover {
+    transform: scale(1.1);
+}
+.contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* adjust the width as needed */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    margin-bottom: 10px;
+}
+
+.form-group input, .form-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.form-group button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-group button[type="submit"]:hover {
+    background-color: #0069d9;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer .col-md-4 {
+    flex-basis: 33.33%;
+    margin-bottom: 20px;
+}
+
+.footer h5 {
+    margin-top: 0;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer li {
+    margin-bottom: 10px;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #ccc;
+}
+
+.footer .text-center {
+    margin-top: 20px;
+}
+
+/* Reglas para dispositivos pequeños */
+@media (max-width: 768px) {
+    .footer {
+        padding: 10px;
+    }
+    .footer .col-md-4 {
+        flex-basis: 50%;
+    }
+}
+
+/* Reglas para dispositivos muy pequeños */
+@media (max-width: 480px) {
+    .footer {
+        padding: 5px;
+    }
+    .footer .col-md-4 {
+        flex-basis: 100%;
+    }
+}

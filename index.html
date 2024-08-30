@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Web con Flexbox y CSS Grid</title>
+    <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+    <!-- Menú lateral -->
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#gallery">Galería</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <div class="main-content">
+        <!-- Menú superior -->
+        <header class="topbar">
+
+            <div class="logo-item"><img src="assets/img/img2.jpeg" alt="Imagen 1"></div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#gallery">Galería</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Sección principal -->
+        <section id="home" class="home">
+            <h1>Bienvenido a mi página</h1>
+            <div>
+                <p>En términos amplios la construcción sustentable debería entenderse como el desarrollo de la construcción tradicional, pero con consideraciones de responsabilidad con el medio ambiente de parte de todos los actores involucrados. Esto implica un interés creciente en todas las etapas del proceso</p>
+            </div>
+            <div>
+                <p>considerando las diferentes alternativas, con una preocupación especial hacia el cuidado de los recursos naturales, previniendo la contaminación ambiental, para proporcionar un ambiente saludable, tanto en el interior de los edificios como en su entorno. [Kibert, 1994].</p>
+            </div>
+        </section>
+
+        <!-- Galería -->
+        <section id="gallery" class="gallery">
+            <h2>Galería de Productos</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="assets/img/img2.jpeg" alt="Imagen 1"></div>
+                <div class="gallery-item"><img src="assets/img/img4.jpeg" alt="Imagen 2"></div>
+                <div class="gallery-item"><img src="assets/img/img5.jpeg" alt="Imagen 3"></div>
+
+                <div class="gallery-item-2"><img src="assets/img/img6.jpeg" alt="Imagen 4"></div>
+                <div class="gallery-item-2"><img src="assets/img/img2.jpeg" alt="Imagen 5"></div>
+                <div class="gallery-item-2"><img src="assets/img/img5.jpeg" alt="Imagen 6"></div>
+
+                <div class="gallery-item-3"><img src="assets/img/img6.jpeg" alt="Imagen 4"></div>
+                <div class="gallery-item-3"><img src="assets/img/img2.jpeg" alt="Imagen 5"></div>
+                <div class="gallery-item-3"><img src="assets/img/img5.jpeg" alt="Imagen 6"></div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contacto">
+            <h2>contacto</h2>
+
+            <form class="form">
+                <div class="form-group mb-4">
+
+                    <input class="form-control" placeholder="Nombre">
+                </div>
+                <div class="form-group mb-4">
+
+                    <input class="form-control" placeholder="Correo electrónico" />
+                </div>
+                <div class="form-group">
+
+                    <textarea class="form-control" placeholder="Escribe aquí tu mensaje"></textarea>
+                </div>
+                <div class="my-3 text-end">
+                    <button class="btn btn-info text-light">Enviar</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h5>Información</h5>
+                        <ul>
+                            <li><a href="#">Acerca de nosotros</a></li>
+                            <li><a href="#">Terminos y condiciones</a></li>
+                            <li><a href="#">Política de privacidad</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Enlaces rápidos</h5>
+                        <ul>
+                            <li><a href="#">Inicio</a></li>
+                            <li><a href="#">Productos</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Redes sociales</h5>
+                        <ul>
+                            <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                            <li><a href="#" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+                            <li><a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="text-center">© Mauricio Rubio - Full Stack JS 2024. Todos los derechos reservados..</p>
+            </div>
+        </footer>         
+
+    </div>
+</body>
+</html>
